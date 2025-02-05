@@ -41,7 +41,6 @@ body {
   border-left: 4px solid #8000e4;
   padding-left: 10px;
 }
-
 /*_Кнопки по горизонтали______*/
 .two_button {
   justify-content: space-between;
@@ -53,7 +52,6 @@ body {
 .btn1, .btn2 {
   width: 50%;
 }
-
 /*_Кнопка Контактов___________*/
 .button1 {
   height: 50px;

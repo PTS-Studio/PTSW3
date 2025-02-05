@@ -1,19 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/error.css">
-        <title>ТехРаботы</title>
-    </head>
-    <body>
-        <div class="content">
-            <h1>Ведутся технические работы</h1>
-            <p>Просим свои извинения за представленные неудобства, мы работаем над проблемой и скоро решим ее.</p>
-            <div class="two_button">
-                <div class="btn1"><button type="button" class="button1" onclick="location.href='home.html'">Главная</button></div>
-                <div class="btn2"><button type="button" class="button2" onclick="location.href='error.html'">Обновить</button></div>
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прокручиваемый блок</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left {
+            width: 50%;
+            overflow: hidden;
+            background: darkolivegreen;
+            position: sticky;
+            height: auto;
+        }
+
+        #moving-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: lightblue;
+            padding: 20px;
+            border: 1px solid #000;
+            width: 100%;
+        }
+
+        .right {
+            width: 50%;
+            padding: 20px;
+            background: green;
+        }
+
+        .content {
+            height: 200vh;
+        }
+    </style>
+    <script>
+        document.addEventListener('scroll', function() {
+            const movingBlock = document.getElementById('moving-block');
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const blockHeight = movingBlock.offsetHeight;
+            const blockTop = movingBlock.getBoundingClientRect().top;
+            const rightContent = document.querySelector('.right .content');
+            const rightContentHeight = rightContent.offsetHeight;
+            const rightColumn = document.querySelector('.right');
+            const rightColumnTop = rightColumn.getBoundingClientRect().top + window.scrollY; // Позиция правой колонки относительно документа
+
+            const maxY = rightContentHeight + (rightColumnTop - windowHeight);
+            const blockCenter = blockTop + blockHeight / 2;
+
+            const isBlockInCenterView = blockCenter <= windowHeight / 2;
+
+            if (isBlockInCenterView) {
+                const blockTranslateY = Math.max(0, scrollY - (windowHeight / 2 - blockHeight / 2));
+                if (scrollY <= maxY ) {
+                    movingBlock.style.transform = `translateY(${blockTranslateY}px)`;
+                    movingBlock.style.position = 'absolute';
+                } else {
+                    movingBlock.style.position = 'absolute';
+                    movingBlock.style.transform = `translateY(${maxY - (windowHeight/2 - blockHeight/2)}px)`;
+                }
+            } else {
+                    movingBlock.style.transform = `translateY(0px)`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="sdsd" style="height: 500px;"></div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sit earum nobis autem est architecto facere. Repudiandae assumenda eveniet accusantium alias asperiores consequatur nobis cupiditate aut? Sed, dolor! Dolor, reprehenderit!
+    <div class="container">
+        <div class="left">
+            <div id="moving-block">Я перемещающийся блок</div>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h1>Текстовый блок</h1>
+                <p>Здесь какой-то текст. Прокрутите вниз, чтобы увидеть эффект перемещения блока слева.</p>
+
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
