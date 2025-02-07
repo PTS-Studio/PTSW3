@@ -203,30 +203,44 @@ p, h1, h2 {
   width: 1080px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start; /* Измените это свойство */
   padding: 100px 0 100px 0;
-  justify-content: space-between;
   gap: 20px;
 }
-
+.skill_sector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* background: #161616; */
+}
 .skill_block_left {
-  width: 50%;
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 220px;
+  flex-direction: column; /* Добавьте это для вертикального расположения контента */
 }
 .skill_block_right {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* flex: 1 1 220px; */
+  flex: 1 1 220px;
+  padding: 45px 25px 25px 25px;
+  border-radius: 0 0 10px 10px;
+  
+  background: rgb(34,34,34);
+  background: -moz-linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
+  background: linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#161616",GradientType=1);
+
+  border-top: 2px solid #e2e8f077;
+  flex-direction: column; /* Это поможет лучше управлять высотами */
   gap: 20px;
 }
 .skill_window {
   width: 100%;
-  height: auto;
   padding: 45px 25px 45px 25px;
-  background: #161616;
-  border-radius: 5px;
+  border-radius: 0px;
+  /* background: #161616; */
   border-top: 2px solid #e2e8f077;
 }
 .languages_programming {
@@ -280,6 +294,7 @@ p, h1, h2 {
 }
 .toggler__content-box  {
   margin: 5px;
+  display: none; /* Скрывать все контент-боксы по умолчанию */
   position: absolute;
   opacity: 0;
   padding: 25px 25px;
@@ -289,13 +304,12 @@ p, h1, h2 {
   line-height: 1.5rem;
   font-size: 14px;
   z-index: -1;
-  flex: 1 1 220px;
 }
 .toggler__checkbox {
   display: none;
 }
 .toggler__checkbox:checked ~ .toggler__content-box {
-  height: auto;
+  display: block; /* Показывать только выбранный контент-бокс */
   display: block;
   position: relative;
   transition: opacity .5s linear;  
@@ -460,9 +474,17 @@ justify-content: center;
   }
   .skill_block_left {
     width: 100%;
+    flex: none;
   }
   .skill_block_right {
     width: 100%;
+    background: none;
+    flex: none;
+    border-top: none;
+    padding: 0px 25px 25px 25px;
+  }
+  .skill_sector {
+    background: #161616;
   }
 }
 
