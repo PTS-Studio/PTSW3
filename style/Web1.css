@@ -87,10 +87,10 @@ p, h1, h2 {
   gap: 20px;
 }
 .sector_block_right {
-  align-items: center;
-  justify-content: right;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: right;
   flex: 1 1 220px;
 }
 .two-button {
@@ -210,30 +210,24 @@ p, h1, h2 {
 .skill_sector {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
   /* background: #161616; */
 }
 .skill_block_left {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 220px;
+  flex: 1 1 440px;
   flex-direction: column; /* Добавьте это для вертикального расположения контента */
 }
 .skill_block_right {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 220px;
-  padding: 45px 25px 25px 25px;
-  border-radius: 0 0 10px 10px;
-  
-  background: rgb(34,34,34);
-  background: -moz-linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
-  background: linear-gradient(45deg, rgba(34,34,34,1) 0%, rgba(22,22,22,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#161616",GradientType=1);
-
+  border-radius: 5px;
+  background: #161616;
   border-top: 2px solid #e2e8f077;
-  flex-direction: column; /* Это поможет лучше управлять высотами */
+  padding: 25px;
+  flex-direction: column;  /*Это поможет лучше управлять высотами */
   gap: 20px;
 }
 .skill_window {
@@ -393,6 +387,16 @@ justify-content: center;
   .skill_block {
     margin: 0 110px 0 110px;
   }
+  .education_block {
+    margin: 0 110px 0 110px;
+  }
+  .skill_block_left, .skill_block_right {
+    flex: 1 1 220px;
+  }
+  .sector_block_left2, .sector_block_right2 {
+    flex: none;
+    width: 100%;
+  }
   .FIO {
     font-size: 52px;
     text-align: center;
@@ -483,8 +487,12 @@ justify-content: center;
     border-top: none;
     padding: 0px 25px 25px 25px;
   }
+  .skill_window {
+    border-radius: 5px;
+  }
   .skill_sector {
     background: #161616;
+    gap: 20px;
   }
 }
 
@@ -498,6 +506,9 @@ justify-content: center;
   .skill_block {
     margin: 0 50px 0 50px;
   }
+  .education_block {
+    margin: 0 50px 0 50px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -508,6 +519,9 @@ justify-content: center;
     margin: 0 10px 0 10px;
   }
   .skill_block {
+    margin: 0 10px 0 10px;
+  }
+  .education_block {
     margin: 0 10px 0 10px;
   }
   .button1 {
@@ -535,7 +549,6 @@ justify-content: center;
     padding: 45px 25px 45px 25px;
   }
   .FIO {
-    text-align: left;
     font-size: 35px;
     line-height: 40px;
   }
