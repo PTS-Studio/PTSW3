@@ -31,7 +31,7 @@ p, h1, h2 {
   text-align: left;
 }
 .text-p16 {
-  width: 36%;
+  width: 37.5%;
 }
 .height-max {
   color: white;
@@ -159,17 +159,23 @@ p, h1, h2 {
   padding: 25px;
   gap: 50px;
 }
+.stage_sector {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 440px;
+  gap: 20px;
+}
 .stage_column_left {
   display: flex;
   flex-direction: column;
-  flex: 1px 1 220px;
+  flex: 1px 1 100px;
   line-height: 26px;
 }
 .stage_column_center {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   flex: 1 1 220px;
 }
 .stage_column_right {
@@ -203,7 +209,7 @@ p, h1, h2 {
   width: 1080px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start; /* Измените это свойство */
+  align-items: flex-start;
   padding: 100px 0 100px 0;
   gap: 20px;
 }
@@ -223,18 +229,21 @@ p, h1, h2 {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 220px;
-  border-radius: 5px;
   background: #161616;
-  border-top: 2px solid #e2e8f077;
-  padding: 25px;
+  border-top: 15px solid #e2e8f077;
+  border-left: 1px solid #e2e8f077;
+  border-right: 1px solid #e2e8f077;
+  border-bottom: 1px solid #e2e8f077;
+  /* border: 1px solid #e2e8f077; */
+  border-radius: 5px;
+  /* padding: 25px; */
   flex-direction: column;  /*Это поможет лучше управлять высотами */
-  gap: 20px;
 }
 .skill_window {
   width: 100%;
   padding: 45px 25px 45px 25px;
-  border-radius: 0px;
-  /* background: #161616; */
+  border-radius: 5px;
+  background: #161616;
   border-top: 2px solid #e2e8f077;
 }
 .languages_programming {
@@ -269,30 +278,29 @@ p, h1, h2 {
   flex-wrap: wrap;
   background: #161616;
   border-radius: 5px;
-  border: 2px solid #242424;
+  border-bottom: 2px solid #242424;
   z-index: 1;
 }
 .toggler__label {
   width: 100%;
-  height: 74px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
-  padding: 25px 30px;
+  padding: 10px 30px;
 }
 .toggler__label::selection {
   color: none;
   background: none;
 }
 .toggler__content-box  {
-  margin: 5px;
+  margin: 0 10px 10px 10px;
   display: none; /* Скрывать все контент-боксы по умолчанию */
   position: absolute;
   opacity: 0;
   padding: 25px 25px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   background: #272727;
   color: #e3e3e3;
   line-height: 1.5rem;
@@ -323,6 +331,78 @@ p, h1, h2 {
   width: 10px;
   height: auto;
 }
+/*_______________________________________БЛОК ПРОЕКТОВ______________________________________*/
+.project_block {
+  width: 1080px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.two-project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.project_block_left {
+  width: 62%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 440px;
+  flex-direction: column;
+  background: #161616;
+  border-top: 2px solid #e2e8f077;
+  border-radius: 5px;
+  padding: 25px 25px 30px 25px;
+}
+.project_block_right {
+  width: 38%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 220px;
+  background: #161616;
+  justify-content: center;
+  border-top: 2px solid #e2e8f077;
+  padding: 0 25px 25px 25px;
+  gap: 20px;
+  border-radius: 5px;
+}
+.project_block_main {
+  width: 62%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 25px 0 20px;
+  gap: 20px;
+}
+.company_logo {
+  width: 405px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  background: #37373877;
+  border-radius: 5px;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.icon--logoPAST {
+  width: 80px;
+  height: auto;
+}
+.photo_block {
+  width: 100%;
+  height: 200px;
+  background: #1c1c229e;
+}
+.load_file {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #272727;
+  margin-top: 20px;
+}
+.files_block {
+  margin-top: 20px;
+}
 /*_____________________________________БЛОК ОБРАЗОВАНИЯ_____________________________________*/
 .education_block {
   width: 1080px;
@@ -331,19 +411,19 @@ p, h1, h2 {
   align-items: center;
   flex-wrap: wrap;
   display: flex;
-  padding-bottom: 70px;
-  gap: 20px;
+  padding: 100px 0 100px 0;
 }
 .sector_block_left2 {
   background: #161616; 
-  padding: 45px;
+  padding: 25px;
   align-items: center;
   justify-content: left;
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 220px;
+  flex: 1 1 440px;
   gap: 20px;
-  border-radius: 20px;
+  border-radius: 5px;
+  border-top: 2px solid #e2e8f077;
 }
 .sector_block_right2 {
   align-items: center;
@@ -352,10 +432,48 @@ p, h1, h2 {
   flex-wrap: wrap;
   flex: 1 1 220px;
 }
-.icon-avatar2 {
+.icon--avatar2 {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
+/*__________________________________БЛОК КОНТАКТОВ__________________________________________*/
+.contacts_block {
+  width: 1080px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact_form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: auto;
+  background: #161616;
+  border-top: 2px solid #e2e8f077;
+  border-radius: 5px;
+  padding: 25px;
+}
+.text-block {
+  width: 90%;
+  margin-bottom: 30px;
+}
+.text-number {
+  font-size: 16px;
+  font-weight: 500;
+  width: 10%;
+}
+.button-contacts {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #e4e4e4;
+}
+/*__________________________________БЛОК ВОПРОСОВ___________________________________________*/
 
 /*__________________________________ФУТЕР САЙТА_____________________________________________*/
 footer {
@@ -389,6 +507,14 @@ justify-content: center;
   }
   .education_block {
     margin: 0 110px 0 110px;
+  }
+  .project_block {
+    margin: 0 110px 0 110px;
+  }
+
+  .project_block_left, .project_block_right {
+    width: 100%;
+    flex: none;
   }
   .skill_block_left, .skill_block_right {
     flex: 1 1 220px;
@@ -476,6 +602,9 @@ justify-content: center;
   .skill_block {
     margin: 0 110px 0 110px;
   }
+  .project_block {
+    margin: 0 110 0 110px;
+  }
   .skill_block_left {
     width: 100%;
     flex: none;
@@ -509,6 +638,9 @@ justify-content: center;
   .education_block {
     margin: 0 50px 0 50px;
   }
+  .project_block {
+    margin: 0 50px 0 50px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -522,6 +654,9 @@ justify-content: center;
     margin: 0 10px 0 10px;
   }
   .education_block {
+    margin: 0 10px 0 10px;
+  }
+  .project_block {
     margin: 0 10px 0 10px;
   }
   .button1 {
@@ -544,6 +679,9 @@ justify-content: center;
   }
   .text_h1 {
     font-size: 20px;
+  }
+  .text-h32 {
+    font-size: 30px;
   }
   .sector_block_left2 {
     padding: 45px 25px 45px 25px;
