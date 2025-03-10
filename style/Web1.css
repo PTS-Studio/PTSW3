@@ -106,7 +106,7 @@ p, h1, h2 {
 .button1 {
   width: 40%;
   height: 45px;
-  margin-top: 20px;
+  margin-top: 10px;
   background: #e2e8f0;
   border: 2px solid #e2e8f0;
   color: black;
@@ -127,7 +127,7 @@ p, h1, h2 {
 .button2 {
   width: 40%;
   height: 45px;
-  margin-top: 20px;
+  margin-top: 10px;
   border: 2px solid #e2e8f0;
   justify-content: center;
   align-items: center;
@@ -503,7 +503,11 @@ p, h1, h2 {
   text-align: center;
 }
 
-/* Responsive Styles for Home Page */
+@media (max-width: 1080px) {
+  .code-block pre code {
+    font-size: 0.5rem;
+  }
+}
 @media (max-width: 992px) {
   .hero {
     padding: 3rem 0;
