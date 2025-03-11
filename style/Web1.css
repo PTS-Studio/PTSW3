@@ -250,7 +250,7 @@ p, h1, h2 {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 440px;
-  flex-direction: column; /* Добавьте это для вертикального расположения контента */
+  flex-direction: column;
 }
 .skill_block_right {
   display: flex;
@@ -264,7 +264,7 @@ p, h1, h2 {
   /* border: 1px solid #e2e8f077; */
   border-radius: 5px;
   /* padding: 25px; */
-  flex-direction: column;  /*Это поможет лучше управлять высотами */
+  flex-direction: column;
 }
 .skill_window {
   width: 100%;
@@ -377,7 +377,8 @@ p, h1, h2 {
   --container-width: 1200px;
 }
 .code-block {
-  min-width: 500px;
+  /*min-width: 500px; Для правильной работы указывай min-width: 500px и убирай width: 100% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+  width: 100%;
   background-color: var(--bg-secondary);
   border-radius: var(--border-radius);
   padding: 2rem 1.5rem;
@@ -815,12 +816,6 @@ justify-content: center;
     height: auto;
     gap: 20px;
   }
-  .sector_block_left {
-    justify-content: center;
-  }
-  .two-button, .button2 {
-    width: 100%;
-  }
   .TPEK {
     margin: 0 auto;
     text-align: center;
@@ -833,15 +828,15 @@ justify-content: center;
     width: 100%;
     gap: 10px;
   }
-  .button1 {
-    width: 100%;
+  
+  .sector_block_left {
+    justify-content: center;
   }
   .sector_block_right {
     margin-top: 50px;
     justify-content: center;
     flex: none;
     width: 100%;
-    display: none;
   }
   .update_block {
     border-radius: 0;
@@ -908,6 +903,9 @@ justify-content: center;
   .titul_block {
     margin: 80px 50px 80px 50px;
   }
+  .button1, .button2 {
+    width: 100%;
+  }
   .designer_block {
     margin: 0 50px 0 50px;
   }
@@ -923,12 +921,9 @@ justify-content: center;
 }
 
 @media (max-width: 550px) {
-  .titul_block {
-    margin: 80px 10px 80px 10px;
-  }
-  .code-block {
-    width: 100px;
-  }
+  /*.titul_block {
+    margin: 80px 10px 80px 10px; @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  }*/
   .designer_block {
     margin: 0 10px 0 10px;
   }
